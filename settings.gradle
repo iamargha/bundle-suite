@@ -1,0 +1,6 @@
+rootProject.name = 'bundle-suite'
+include ':admin'
+include ':admin-db'
+
+project(':admin').projectDir = "$rootDir/admin" as File
+project(':admin-db').projectDir = "$rootDir/admin-db" as File

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>admin</display-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		classpath*:/applicationContext.xml
+		</param-value>
+	</context-param>
+
+	<!-- Parameter for bypass oAuth Security -->
+	
+	<!--<context-param>
+		<param-name>resteasy.scan</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
+		<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/speech</param-value> </context-param>
+	
+	<context-param>
+		<param-name>resteasy.providers</param-name>
+		<param-value>com.mhhe.openapi.provider.JSONBodyReader,com.mhhe.openapi.provider.XMLBodyReader,com.mhhe.openapi.provider.XMLBodyWriter,com.mhhe.openapi.provider.JSONBodyWriter,com.mhhe.openapi.provider.TEXTHTMLBodyWriter,com.mhhe.openapi.provider.TEXTHTMLBodyReader</param-value>
+	</context-param>
+-->
+	<listener>
+		<listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.mhe.bundle.web.servlet.BundleContextLoaderListener</listener-class>
+	</listener>
+	
+	<!--  <listener>
+		<listener-class>org.jboss.resteasy.plugins.spring.SpringContextLoaderListener</listener-class>
+	</listener>
+-->
+	
+
+	<servlet>
+		<servlet-name>Resteasy</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+	</servlet>
+  
+    <!-- For Logback -->
+    <!-- For request hit count -->
+   
+	
+
+	
+
+	
+	<!-- Server Cluster Start -->
+	<servlet-mapping>
+	   <servlet-name>Resteasy</servlet-name>
+	   <url-pattern>/dbRefresh/*</url-pattern>
+	</servlet-mapping>
+	
+	
+   
+    
+
+	
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<jsp-config>
+	</jsp-config>
+	
+	
+
+</web-app>
+

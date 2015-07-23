@@ -1,0 +1,14 @@
+apply plugin: "java"
+archivesBaseName = "admin"
+version = '1.0-FINAL'
+
+buildscript {
+    repoUrl = "http://awsci.mheducation.com/artifactory/repo"
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+     repositories {
+        maven { url repoUrl  }
+
+    }
+}

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Built-By: 854059
+Build-Jdk: 1.7.0_45
+Created-By: Maven Integration for Eclipse
+Implementation-Title: 
+Implementation-URL: 
+Implementation-Vendor-Id: 
+Implementation-Version: 
+Specification-Title: 
+Specification-Vendor: 
+Specification-Version: 
+

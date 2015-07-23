@@ -1,0 +1,25 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.mhe.bundle'
+version = '1.0-SNAPSHOT'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.5
+  targetCompatibility = 1.5
+
+  
+  repositories {
+    mavenLocal()
+    
+    maven { url "http://nvldev01l.eppg.com:8081/artifactory/libs-releases" }
+    maven { url "http://nvldev01l.eppg.com:8081/artifactory/libs-snapshots" }
+    maven { url "http://awsci.mheducation.com/artifactory/repo" }
+  }
+
+  
+  
+  
+}
